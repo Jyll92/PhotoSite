@@ -62,9 +62,12 @@ img:hover {
 .imgTopRight:hover {
     transform: scale(2.25) translateY(5vw) translateX(-7vw);
 }
-.imgLeft:hover {
-    transform: scale(2.25) translateX(7vw);
+.imgBot:hover {
+    transform: scale(2.25) translateY(-6vw);
 }
-.imgRight:hover {
-    transform: scale(2.25) translateX(-7vw);
+.imgBotLeft:hover {
+    transform: scale(2.25) translateX(7vw) translateY(-6vw);
+}
+.imgBotRight:hover {
+    transform: scale(2.25) translateX(-7vw) translateY(-6vw);
 }
