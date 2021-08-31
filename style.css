@@ -20,7 +20,7 @@ p {
 }
 #heart {
     position: absolute;
-    left: 48.5%;
+    left: 49%;
     color: #0ad1d1;
     font-size: 3vw;
     animation: pulse 1s infinite;
