@@ -38,8 +38,8 @@ p {
         text-shadow: 0px 0px 1vw rgba(255, 0, 242, 0.712);}
     
     100% {transform: scale(1);
-        color: #0ad1d1
-        text-shadow: 0px 0px 0.5vw rgba(0, 225, 255, 0.712)}
+        color: #0ad1d1;
+        text-shadow: 0px 0px 0.5vw rgba(0, 225, 255, 0.712);}
 }
 
 #lastName {
