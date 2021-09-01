@@ -21,8 +21,8 @@ p {
     text-shadow: 0px 0px 0.5vw rgba(255, 0, 242, 0.712);
 }
 #heart {
-    position: absolute;
-    left: 49%;
+    position: relative;
+    left: 2.25vw;
     color: #0ad1d1;
     font-size: 3vw;
     text-shadow: 0px 0px 0.5vw rgba(0, 225, 255, 0.712);
@@ -44,7 +44,7 @@ p {
 
 #lastName {
     position: relative;
-    left: 17.5%;
+    left: 15.5%;
     text-shadow: 0px 0px 0.5vw rgba(255, 0, 242, 0.712);
 }
 img {
