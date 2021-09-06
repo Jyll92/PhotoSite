@@ -9,8 +9,11 @@
     <title>Photo Site</title>
   </head>
   <body>
-        <p><span id="firstName">Jyll</span> <span id="heart">&#9829;</span> <span id="lastName">Ataru</span></p>
+        <canvas id="matrix"></canvas>
 
+        <p><span id="firstName">Jyll</span> <span id="heart">&#9829;</span> <span id="lastName">Ataru</span></p>
+        
+<div id="imgBox">
         <img class="imgTopLeft" src="./Images/tj-holowaychuk-K-94QEMm3vo-unsplash.jpg" alt="Glass Elevators on Building Exterrior" />
         <img class="imgTop" src="./Images/xingye-jiang-Xxsmhd_MNws-unsplash.jpg" alt="Foggy City with Round Buidling Architecture" />
         <img class="imgTop" src="./Images/irina-iriser-rhRlzHJcv5w-unsplash.jpg" alt="Skyscrapers with Neon Lights at Night" />
@@ -19,5 +22,55 @@
         <img class="imgBot" src="./Images/hu-chen-5O6c_pLziXs-unsplash.jpg" alt="Gardens by the Bay in Singapore" />
         <img class="imgBot" src="./Images/alex-knight-Ys-DBJeX0nE-unsplash.jpg" alt="Nightime View of Water and Bridge" />
         <img class="imgBotRight" src="./Images/lennon-cheng-yAeUPmbyS-0-unsplash.jpg" alt="Looking Down City Street at Night" />
+      </div>
+      <br>
+      <h6>Hover to Zoom</h6>
+        <script>
+          // SETTINGS VARIABLES AT TOP
+          // Font Color
+          const textColor = "#c0cc";
+          // Font Clearing (alpha to fade text quicker / slower)
+          const textClear = "rgba(0,0,0,.15)"
+          // Font Size
+          const fontSize = 14;
+          // Time per Action (in ms)
+          const timeDelay = 100;
+          // Hex determines what characters will display, values are split to an array
+          const hex = "01234567890aABCDEF?!#$".split("");
+
+
+          // Define Window Dimensions & Set Canvas resolution based on window
+          const w = (matrix.width = window.innerWidth);
+          const h = (matrix.height = window.innerHeight);
+          // Set up 2d canvas for drawing
+          const ctx = matrix.getContext("2d");
+
+          // Now lets set up an array for later, with increasing number based on width
+          // this represents how many rows of text will fall
+          const mRows = Array(Math.floor(w / fontSize) + 1).fill(0);
+
+          // This function will return a random item of an array, we need it later
+          const rHex = (items) => items[Math.floor(Math.random() * items.length)]
+
+          // Now for the magic
+          setInterval(() => {
+            //Set to fill backdrop, that way letters effectively dissapear over time
+            ctx.fillStyle = textClear;
+            ctx.fillRect(0,0,w,h);
+            // Now for the text filling style
+            ctx.fillStyle = textColor;
+            // We need a function to fill what we want
+            // We map mRows to run a function on each of our rows
+            // x and y coordinates for locations
+            mRows.map((y, x) => {
+              // Font settings
+              ctx.font = `${fontSize}px 'Turret Road'`;
+              //Fill one of our mRows with random hex character
+              ctx.fillText(rHex(hex), x * fontSize, y);
+              // Resets row if text makes it to bottom or randomly; otherwise moves down to next letter
+              mRows[x] = y >= h || y > 10 * fontSize + h * Math.random() ? 0 : y + fontSize;
+            });
+          }, timeDelay);
+        </script>
   </body>
 </html>
