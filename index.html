@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="HTML CSS Photo Site" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./planet.svg" />
     <title>Photo Site</title>
   </head>
   <body>
@@ -14,23 +15,23 @@
         <p><span id="firstName">Jyll</span> <span id="heart">&#9829;</span> <span id="lastName">Ataru</span></p>
         
 <div id="imgBox">
-        <img class="imgTopLeft" src="./Images/tj-holowaychuk-K-94QEMm3vo-unsplash.jpg" alt="Glass Elevators on Building Exterrior" />
-        <img class="imgTop" src="./Images/xingye-jiang-Xxsmhd_MNws-unsplash.jpg" alt="Foggy City with Round Buidling Architecture" />
-        <img class="imgTop" src="./Images/irina-iriser-rhRlzHJcv5w-unsplash.jpg" alt="Skyscrapers with Neon Lights at Night" />
-        <img class="imgTopRight" src="./Images/carl-raw-m3hn2Kn5Bns-unsplash.jpg" alt="Arcade Machines in Dark Room" />
-        <img class="imgBotLeft" src="./Images/hiep-duong-zSsUcdvjPzs-unsplash.jpg" alt="Motorcylce in Dark Alley" />
-        <img class="imgBot" src="./Images/hu-chen-5O6c_pLziXs-unsplash.jpg" alt="Gardens by the Bay in Singapore" />
-        <img class="imgBot" src="./Images/alex-knight-Ys-DBJeX0nE-unsplash.jpg" alt="Nightime View of Water and Bridge" />
-        <img class="imgBotRight" src="./Images/lennon-cheng-yAeUPmbyS-0-unsplash.jpg" alt="Looking Down City Street at Night" />
+        <img class="collectionImg imgTopLeft" src="./Images/tj-holowaychuk-K-94QEMm3vo-unsplash.jpg" alt="Glass Elevators on Building Exterrior" />
+        <img class="collectionImg imgTop" src="./Images/xingye-jiang-Xxsmhd_MNws-unsplash.jpg" alt="Foggy City with Round Buidling Architecture" />
+        <img class="collectionImg imgTop" src="./Images/irina-iriser-rhRlzHJcv5w-unsplash.jpg" alt="Skyscrapers with Neon Lights at Night" />
+        <img class="collectionImg imgTopRight" src="./Images/carl-raw-m3hn2Kn5Bns-unsplash.jpg" alt="Arcade Machines in Dark Room" />
+        <img class="collectionImg imgBotLeft" src="./Images/hiep-duong-zSsUcdvjPzs-unsplash.jpg" alt="Motorcylce in Dark Alley" />
+        <img class="collectionImg imgBot" src="./Images/hu-chen-5O6c_pLziXs-unsplash.jpg" alt="Gardens by the Bay in Singapore" />
+        <img class="collectionImg imgBot" src="./Images/alex-knight-Ys-DBJeX0nE-unsplash.jpg" alt="Nightime View of Water and Bridge" />
+        <img class="collectionImg imgBotRight" src="./Images/lennon-cheng-yAeUPmbyS-0-unsplash.jpg" alt="Looking Down City Street at Night" />
       </div>
       <br>
-      <h6>Hover to Zoom</h6>
+      <a href="http://www.JyllAtaru.com"><span>Return</span> <img src="./Planet.svg" alt="Jyll Planet Logo"><span>Home</span></a>
         <script>
           // SETTINGS VARIABLES AT TOP
           // Font Color
           const textColor = "#c0cc";
           // Font Clearing (alpha to fade text quicker / slower)
-          const textClear = "rgba(0,0,0,.15)"
+          const textClear = "rgba(0,0,0,.07)"
           // Font Size
           const fontSize = 14;
           // Time per Action (in ms)
@@ -68,7 +69,7 @@
               //Fill one of our mRows with random hex character
               ctx.fillText(rHex(hex), x * fontSize, y);
               // Resets row if text makes it to bottom or randomly; otherwise moves down to next letter
-              mRows[x] = y >= h || y > 10 * fontSize + h * Math.random() ? 0 : y + fontSize;
+              mRows[x] = y >= h || y > (Math.random() * 80 + 8) * fontSize + h * Math.random() ? 0 : y + fontSize;
             });
           }, timeDelay);
         </script>
