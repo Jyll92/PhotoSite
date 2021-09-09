@@ -5,28 +5,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="HTML CSS Photo Site" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" type="image/svg+xml" href="./planet.svg" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" type="image/svg+xml" href="./Images/planet.svg" />
     <title>Photo Site</title>
   </head>
   <body>
         <canvas id="matrix"></canvas>
 
         <p><span id="firstName">Jyll</span> <span id="heart">&#9829;</span> <span id="lastName">Ataru</span></p>
-        
+<div class="zoom hidden">
+  <img class="zoomed hidden img1Z" src="./Images/tj-holowaychuk-K-94QEMm3vo-unsplash.jpg" alt="Glass Elevators on Building Exterrior" />
+  <img class="zoomed hidden img2Z" src="./Images/xingye-jiang-Xxsmhd_MNws-unsplash.jpg" alt="Foggy City with Round Buidling Architecture" />
+  <img class="zoomed hidden img3Z" src="./Images/irina-iriser-rhRlzHJcv5w-unsplash.jpg" alt="Skyscrapers with Neon Lights at Night" />
+  <img class="zoomed hidden img4Z" src="./Images/carl-raw-m3hn2Kn5Bns-unsplash.jpg" alt="Arcade Machines in Dark Room" />
+  <img class="zoomed hidden img5Z" src="./Images/hiep-duong-zSsUcdvjPzs-unsplash.jpg" alt="Motorcylce in Dark Alley" />
+  <img class="zoomed hidden img6Z" src="./Images/hu-chen-5O6c_pLziXs-unsplash.jpg" alt="Gardens by the Bay in Singapore" />
+  <img class="zoomed hidden img7Z" src="./Images/alex-knight-Ys-DBJeX0nE-unsplash.jpg" alt="Nightime View of Water and Bridge" />
+  <img class="zoomed hidden img8Z" src="./Images/lennon-cheng-yAeUPmbyS-0-unsplash.jpg" alt="Looking Down City Street at Night" />
+  <div class="close">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+  </div>
+  
+</div>
 <div id="imgBox">
-        <img class="collectionImg imgTopLeft" src="./Images/tj-holowaychuk-K-94QEMm3vo-unsplash.jpg" alt="Glass Elevators on Building Exterrior" />
-        <img class="collectionImg imgTop" src="./Images/xingye-jiang-Xxsmhd_MNws-unsplash.jpg" alt="Foggy City with Round Buidling Architecture" />
-        <img class="collectionImg imgTop" src="./Images/irina-iriser-rhRlzHJcv5w-unsplash.jpg" alt="Skyscrapers with Neon Lights at Night" />
-        <img class="collectionImg imgTopRight" src="./Images/carl-raw-m3hn2Kn5Bns-unsplash.jpg" alt="Arcade Machines in Dark Room" />
-        <img class="collectionImg imgBotLeft" src="./Images/hiep-duong-zSsUcdvjPzs-unsplash.jpg" alt="Motorcylce in Dark Alley" />
-        <img class="collectionImg imgBot" src="./Images/hu-chen-5O6c_pLziXs-unsplash.jpg" alt="Gardens by the Bay in Singapore" />
-        <img class="collectionImg imgBot" src="./Images/alex-knight-Ys-DBJeX0nE-unsplash.jpg" alt="Nightime View of Water and Bridge" />
-        <img class="collectionImg imgBotRight" src="./Images/lennon-cheng-yAeUPmbyS-0-unsplash.jpg" alt="Looking Down City Street at Night" />
+  <div class="topRow">
+  <div class="poly">
+        <img class="img1" src="./Images/tj-holowaychuk-K-94QEMm3vo-unsplash.jpg" alt="Glass Elevators on Building Exterrior" />
       </div>
-      <br>
-      <a href="http://www.JyllAtaru.com"><span>Return</span> <img src="./planet.svg" alt="Jyll Planet Logo"><span>Home</span></a>
+      <div class="poly">
+        <img class="img2" src="./Images/xingye-jiang-Xxsmhd_MNws-unsplash.jpg" alt="Foggy City with Round Buidling Architecture" />
+      </div>
+      <div class="poly">
+        <img class="img3" src="./Images/irina-iriser-rhRlzHJcv5w-unsplash.jpg" alt="Skyscrapers with Neon Lights at Night" />
+      </div>
+      <div class="poly">
+        <img class="img4" src="./Images/carl-raw-m3hn2Kn5Bns-unsplash.jpg" alt="Arcade Machines in Dark Room" />
+      </div>
+    </div>
+    <div class="bottomRow">
+      <div class="poly">
+        <img class="img5" src="./Images/hiep-duong-zSsUcdvjPzs-unsplash.jpg" alt="Motorcylce in Dark Alley" />
+      </div>
+      <div class="poly">
+        <img class="img6" src="./Images/hu-chen-5O6c_pLziXs-unsplash.jpg" alt="Gardens by the Bay in Singapore" />
+      </div>
+      <div class="poly">
+        <img class="img7" src="./Images/alex-knight-Ys-DBJeX0nE-unsplash.jpg" alt="Nightime View of Water and Bridge" />
+      </div>
+      <div class="poly">
+        <img class="img8" src="./Images/lennon-cheng-yAeUPmbyS-0-unsplash.jpg" alt="Looking Down City Street at Night" />
+      </div>
+    </div>
+      </div>
+      <h2>Click to View</h2>
+      <a href="http://www.JyllAtaru.com/Projects"><span>Return</span> <img id="#planet" src="./Images/planet.svg" alt="Jyll Planet Logo"><span>Home</span></a>
         <script>
+          const zoomD = document.querySelector(".zoom");
+          const closeB = document.querySelector(".close");
+          const img1 = document.querySelector(".img1");
+          const img2 = document.querySelector(".img2");
+          const img3 = document.querySelector(".img3");
+          const img4 = document.querySelector(".img4");
+          const img5 = document.querySelector(".img5");
+          const img6 = document.querySelector(".img6");
+          const img7 = document.querySelector(".img7");
+          const img8 = document.querySelector(".img8");
+          const img1Z = document.querySelector(".img1Z");
+          const img2Z = document.querySelector(".img2Z");
+          const img3Z = document.querySelector(".img3Z");
+          const img4Z = document.querySelector(".img4Z");
+          const img5Z = document.querySelector(".img5Z");
+          const img6Z = document.querySelector(".img6Z");
+          const img7Z = document.querySelector(".img7Z");
+          const img8Z = document.querySelector(".img8Z");
+
+      closeB.addEventListener("click", () => {
+        zoomD.classList.add("hidden");
+        img1Z.classList.add("hidden");
+        img2Z.classList.add("hidden");
+        img3Z.classList.add("hidden");
+        img4Z.classList.add("hidden");
+        img5Z.classList.add("hidden");
+        img6Z.classList.add("hidden");
+        img7Z.classList.add("hidden");
+        img8Z.classList.add("hidden");
+      });
+      img1.addEventListener("click", () => {
+        zoomD.classList.remove("hidden");
+        img1Z.classList.remove("hidden");
+      });
+      img2.addEventListener("click", () => {
+        zoomD.classList.remove("hidden");
+        img2Z.classList.remove("hidden");
+      });
+      img3.addEventListener("click", () => {
+        zoomD.classList.remove("hidden");
+        img3Z.classList.remove("hidden");
+      });
+      img4.addEventListener("click", () => {
+        zoomD.classList.remove("hidden");
+        img4Z.classList.remove("hidden");
+      });
+      img5.addEventListener("click", () => {
+        zoomD.classList.remove("hidden");
+        img5Z.classList.remove("hidden");
+      });
+      img6.addEventListener("click", () => {
+        zoomD.classList.remove("hidden");
+        img6Z.classList.remove("hidden");
+      });
+      img7.addEventListener("click", () => {
+        zoomD.classList.remove("hidden");
+        img7Z.classList.remove("hidden");
+      });
+      img8.addEventListener("click", () => {
+        zoomD.classList.remove("hidden");
+        img8Z.classList.remove("hidden");
+      });
+
+
+
+
+          // MATRIX BACKGROUND
           // SETTINGS VARIABLES AT TOP
           // Font Color
           const textColor = "#c0cc";
