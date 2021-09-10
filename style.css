@@ -4,7 +4,6 @@
 
 body {
     background-color: #101010f8;
-    overflow: hidden;
 }
 p {
     color: rgb(255, 0, 212);
@@ -24,6 +23,16 @@ p {
     grid-template-rows: 6vh;
     padding-bottom: 3vh;
 }
+h2 {
+    margin: 0 auto 0 auto;
+    padding: 0;
+    text-align: center;
+    font-size: 2.5vh;
+  color: rgba(55, 248, 255, 0.596);
+  font-family: 'Turret Road', cursive;
+  position:relative;
+  bottom: 6vh;
+}
 a {
     text-align: center;
     padding: 0;
@@ -31,30 +40,22 @@ a {
     font-size: 2vh;
     color: rgba(55, 248, 255, 0.596);
     font-family: 'Turret Road', cursive;
-    z-index: -4;
     text-decoration: none;
     display: block;
+    position: relative;
+    bottom: 8vh;
 }
 
 a img {
-    margin: 1vh 1vw;
+    margin: 10px;
     width: 2vw;
+    min-width: 20px;
     height: auto;
     border: none;
     padding: 0;
     box-shadow: 0px 0px 0.4em 1px transparent;
-    position: absolute;
-    left: 48vw;
-}
-
-a span {
     position: relative;
-    top: 1.5vh;
-    right: 2vw;
-}
-a span:last-child {
-    position: relative;
-    left: 1.5vw;
+    top: 20px;
 }
 #firstName {
     background: radial-gradient(circle, #000C, #0006, #0004, #0000);
@@ -66,7 +67,6 @@ a span:last-child {
     text-shadow: 0px 0px 0.5vw rgba(0, 225, 255, 1);
     animation: pulse 1.7s infinite;
 }
-
 @keyframes pulse {
     0% {font-size: 3vw;
         color: #0ad1d1;
@@ -84,7 +84,6 @@ a span:last-child {
         color: #0ad1d1;
         text-shadow: 0px 0px 0.5vw rgba(0, 225, 255, 0.712);}
 }
-
 #lastName {
     background: radial-gradient(circle, #000C, #0006, #0004, #0000);
     text-shadow: 0px 0px 0.5vw rgba(255, 0, 242, 1);
@@ -94,8 +93,6 @@ a span:last-child {
     padding: 0;
     width: 100%;
 }
-
-
 .poly {
     clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     position: relative;
@@ -106,7 +103,6 @@ a span:last-child {
     box-sizing: border-box;
     cursor: pointer;
 }
-
 .poly img {
     position: absolute;
     top: .3vw;
@@ -115,7 +111,6 @@ a span:last-child {
     height: 21.8vw;
     clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 }
-
 .poly:nth-child(2) {
     position: relative;
     right: 2vw;
@@ -128,20 +123,17 @@ a span:last-child {
     position: relative;
     right: 6vw;
 }
-
 .bottomRow {
     position: relative;
     left: 10.25vw;
     bottom: 5.5vw;
-
 }
-
 .poly:hover {
-    transform: scale(1.5);
-    transition: all .5s cubic-bezier(.88,.04,0,.95);
+    transform: scale(1.4);
+    transition: all .6s cubic-bezier(.88,.04,0,.95);
     z-index: 99;
+    overflow: hidden;
 }
-
 .zoom {
     position: absolute;
     top: 0;
@@ -199,25 +191,6 @@ a span:last-child {
   .navIcon {
     cursor: pointer;
   }
-
-  .bar1Bye {
-    transform: rotate(45deg) translateX(50px);
-  }
-  .bar2Bye {
-    transform: rotate(-45deg) translateX(-50px);
-  }
-
-  h2 {
-      margin: 0 auto .5vh auto;
-      padding: 0;
-      text-align: center;
-      font-size: 2.5vh;
-    color: rgba(55, 248, 255, 0.596);
-    font-family: 'Turret Road', cursive;
-    position: relative;
-    bottom: 20px;
-  }
-
 #matrix {
     width: 100vw;
     height: 100%;
